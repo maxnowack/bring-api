@@ -1,0 +1,46 @@
+{
+  "name": "bring-api",
+  "version": "1.0.0",
+  "description": "Node wrapper for inofficial bring api",
+  "main": "dist/index.js",
+  "scripts": {
+    "lint": "eslint src",
+    "build": "babel src -d dist",
+    "test": "babel-node test.js",
+    "prepare": "npm run build",
+    "clean": "rm -rf dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxnowack/node-bring-api.git"
+  },
+  "author": "Max Nowack",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maxnowack/node-bring-api/issues"
+  },
+  "homepage": "https://github.com/maxnowack/node-bring-api#readme",
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": "8.9.3"
+          }
+        }
+      ]
+    ]
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-eslint": "^8.2.1",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.15.0",
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0"
+  },
+  "dependencies": {
+    "node-fetch": "^1.7.3"
+  }
+}
