@@ -37,7 +37,8 @@ export default class Base {
         'X-BRING-CLIENT': client,
         'X-BRING-VERSION': version,
         'User-Agent': userAgent,
-      }, auth && {
+      }, data && { 'Content-Type': 'application/x-www-form-urlencoded' },
+      auth && {
         Cookie: `refresh_token=${this.getRefreshToken()}`,
         Authorization: `Bearer ${this.getAccessToken()}`,
         'X-BRING-USER-UUID': this.uuid,
